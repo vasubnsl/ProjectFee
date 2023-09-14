@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <!-- Include all required CSS or Bootstrap here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>INVENTORY MANAGEMENT</h1>
+        <form id="myform">
+            <div class="mb-3">
+                <label for="name" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Cost</label>
+                <input type="number" class="form-control" id="price" required>
+            </div>
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Product</button>
+        </form>
+
+        <div class="mb-3">
+            <label for="search" class="form-label">Search Product</label>
+            <input type="text" class="form-control" id="search">
+        </div>
+
+        <button id="clear" class="btn btn-warning">Clear All</button>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+                <!-- Product entries will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
